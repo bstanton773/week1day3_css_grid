@@ -1,0 +1,90 @@
+/* Universal Selector */
+*{
+    margin: 0;
+}
+
+.container {  
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 2fr 3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar navbar"
+        "gutter-1 prof-pic prof-info prof-info prof-info gutter-2"
+        "gutter-1 posts posts posts posts gutter-2";
+}
+  
+.navbar{
+    grid-area: navbar; 
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.gutter-1{
+    grid-area: gutter-1;
+}
+
+.gutter-2{
+    grid-area: gutter-2;
+}
+
+.prof-pic{
+    grid-area: prof-pic;
+}
+
+.prof-pic > img {
+    width: 100%;
+    height: auto;
+}
+
+.prof-info{
+    height: 100%;
+    padding: 0 5vw;
+    grid-area: prof-info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.prof-info > h1 {
+    align-self: center;
+}
+
+.posts{
+    grid-area: posts; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.navbar > a{
+    color: white;
+    text-decoration: none;
+}
+
+.post-card{
+    border: solid black 1px;
+    margin: 1vh 0;
+    padding: 1vh;
+}
+
+.card-title{
+    margin: 10px 0;
+}
+
+.card-links{
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
